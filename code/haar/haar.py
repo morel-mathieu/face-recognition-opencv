@@ -7,23 +7,23 @@ import os
 
 # Fonction permettant de redimensionner l'ensemble des images négatives que l'on a dans le dossier negatives
 def resizeNeg():
-    neg_link = glob.glob("../../rsc/negatives/*.jpg")
+    neg_link = glob.glob("../../rsc/haar/negatives/*.jpg")
     a = 1
     for i in neg_link:
         img = cv2.imread(i, cv2.IMREAD_GRAYSCALE)
         resized_image = cv2.resize(img, (100, 100))
-        cv2.imwrite("../../rsc/negatives_resize/"+str(a)+".jpg", resized_image)
+        cv2.imwrite("../../rsc/haar/negatives_resize/"+str(a)+".jpg", resized_image)
         a += 1
 
 
 # Fonction permettant de redimensionner l'ensemble des images positives
 def resizePos():
-    neg_link = glob.glob("../../rsc/positives/*.jpg")
+    neg_link = glob.glob("../../rsc/haar/positives/*.jpg")
     a = 1
     for i in neg_link:
         img = cv2.imread(i, cv2.COLOR_BGR2RGB)
         resized_image = cv2.resize(img, (50, 50))
-        cv2.imwrite("../../rsc/positives_resize/p"+str(a)+".jpg", resized_image)
+        cv2.imwrite("../../rsc/haar/positives_resize/p"+str(a)+".jpg", resized_image)
         a += 1
 
 
