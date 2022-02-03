@@ -12,6 +12,9 @@ os            : https://github.com/python/cpython/blob/3.10/Lib/os.py
 
 pickle        : https://github.com/python/cpython/blob/3.10/Lib/pickle.py
 
+# haarcascade file
+Dans l'ensemble des programmes de /code/face-recognition, j'utilise le fichier pré-entrainé pour les visages de face d'OpenCv.
+Ce projet vous permet de créer votre propre fichier pré-entrainé, avec l'ensemble des fichiers dans /code/haar.
 
 # Programs
 
@@ -28,11 +31,18 @@ Il permet de générer un fichier pré-entrainé avec le local binary pattern ai
 Les images détéctées sont des .jpg, attention à votre dataset !
 #### identification.py
 Ce programme ouvre un flux vidéo celui de la webcam d'un ordinateur portable. Pour les webcams externes ou autre, vous pouvez vous référer à la documentation d'OpenCv/cv2.VideoCapture
+#### create-dataset.py
+Ce programme vous permet de découper les visages de face dans une vidéo placée dans /rsc/face-recognition-images/create-your-own-dataset/video et de les placer dans le dossier.
+Il faut penser à modifier la ligne :
+cam = cv2.VideoCapture("../../rsc/face-recognition-images/create-your-own-dataset/video/your-video.mp4") # La lecture de la vidéo
+pour mettre le nom de votre fichier vidéo ou renommer votre vidéo : your-video. Le format reste le .mp4.
 
 ## rsc/
 ### face-recognition-images/
 Dans ce dossier, vous devez créer des dossiers dont les noms seront les labels affichés dans le programme d'identification.
 Au sein de ces dossiers, par exemple : face-recognition-images/obama vous devez mettre votre dataset de photos de la personne à reconnaître.
+### /video
+Dans ce dossier, vous pouvez mettre vos propres vidéos pour réaliser votre dataset avec create-dataset.py.
 
 ### haar/
 ### negatives/
