@@ -35,7 +35,7 @@ Ce programme ouvre un flux vidéo celui de la webcam d'un ordinateur portable. P
 Ce programme vous permet de découper les visages de face dans une vidéo placée dans /rsc/face-recognition-images/create-your-own-dataset/video et de les placer dans le dossier.
 Il faut penser à modifier la ligne :
 
-10. cam = cv2.VideoCapture("../../rsc/face-recognition-images/create-your-own-dataset/video/your-video.mp4")
+`10> cam = cv2.VideoCapture("../../rsc/face-recognition-images/create-your-own-dataset/video/your-video.mp4")`
 
 pour mettre le nom de votre fichier vidéo ou renommer votre vidéo : your-video. Le format reste le .mp4.
 
